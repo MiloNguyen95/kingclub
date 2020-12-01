@@ -8,10 +8,10 @@
 
     <title>King Club</title>
     <link rel="alternate" type="application/rss+xml" title="King &raquo; Club" href="https://kingx.com.vn" />
-    <link rel='stylesheet' id='fontawesome-all-css'
-        href='assets/css/all.min.css?ver=4.7.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='creativ-university-style-css'
-        href='assets/css/style.css?ver=5.5.3' type='text/css' media='all' />
+    <link rel='stylesheet' id='fontawesome-all-css' href='assets/css/all.min.css' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='creativ-university-style-css' href='assets/css/style.css?ver=5.5.3' type='text/css'
+        media='all' />
     <script type='text/javascript' src='assets/js/jquery.js' id='jquery-core-js'></script>
     <link rel="https://api.w.org/" href="/index.php?rest_route=/" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
@@ -24,11 +24,120 @@
     </style>
     <link rel="icon" href="/wp-content/uploads/2020/09/cropped-logo1-32x32.png" sizes="32x32" />
     <link rel="apple-touch-icon" href="/wp-content/uploads/2020/09/cropped-logo1-180x180.png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/vendor/select2/select2.min.css"
+    />
+
     <meta name="msapplication-TileImage" content="/wp-content/uploads/2020/09/cropped-logo1-270x270.png" />
 </head>
 
-<body class="home blog custom-background hfeed no-sidebar">
+<body class="home custom-background no-sidebar">
+    <!-- Modal -->
+    <div id="myModal" class="modal">
 
+        <!-- Modal content -->
+        <div class="wrap-contact100 modal-content">
+            <form class="contact100-form validate-form">
+              <span class="contact100-form-title"> Điền thông tin <span class="close">&times;</span></span>
+              <div
+                class="wrap-input100 validate-input"
+                data-validate="Vui lòng nhập họ và tên"
+              >
+                <span class="label-input100">Họ và tên</span>
+                <input
+                  class="input100"
+                  type="text"
+                  name="name"
+                />
+                <span class="focus-input100"></span>
+              </div>
+              <div
+                class="wrap-input100 validate-input"
+                data-validate="Vui lòng nhập số điện thoại"
+              >
+                <span class="label-input100">Số điện thoại</span>
+                <input
+                  class="input100"
+                  type="text"
+                  name="phone"
+                />
+                <span class="focus-input100"></span>
+              </div>
+              <div
+                class="wrap-input100 validate-input"
+                data-validate="Vui lòng nhập email: ex@abc.xyz"
+              >
+                <span class="label-input100">Email</span>
+                <input
+                  class="input100"
+                  type="text"
+                  name="email"
+                />
+                <span class="focus-input100"></span>
+              </div>
+              <div
+                class="wrap-input100 validate-input"
+                data-validate="Vui lòng nhập chứng minh thư"
+              >
+                <span class="label-input100">CMND</span>
+                <input
+                  class="input100"
+                  type="text"
+                  name="personalId"
+                />
+                <span class="focus-input100"></span>
+              </div>
+              <div
+                class="wrap-input100 validate-input"
+                data-validate="Vui lòng nhập ngày sinh"
+              >
+                <span class="label-input100">Ngày tháng năm sinh</span>
+                <input
+                  class="input100"
+                  type="text"
+                  name="birth"
+                  placeholder="dd/mm/yyyy"
+                />
+                <span class="focus-input100"></span>
+              </div>
+              <div class="wrap-input100 input100-select">
+                <span class="label-input100">Giới tính</span>
+                <div>
+                  <select class="selection-2" name="gender">
+                    <option>Nam</option>
+                    <option>Nữ</option>
+                  </select>
+                </div>
+                <span class="focus-input100"></span>
+              </div>
+              <div
+                class="wrap-input100 validate-input"
+                data-validate="Nhập mã OTP"
+              >
+                <span class="label-input100">OTP</span>
+                <input
+                  class="input100"
+                  type="text"
+                  name="otp"
+                />
+                <span class="focus-input100"></span>
+              </div>
+              <div class="container-contact100-form-btn">
+                <div class="wrap-contact100-form-btn">
+                  <div class="contact100-form-bgbtn"></div>
+                  <button class="contact100-form-btn">
+                    <span>
+                        Đăng kí tham gia
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+    </div>
     <div id="page" class="site">
         <header id="masthead" class="site-header" role="banner">
             <div class="wrapper">
@@ -62,10 +171,12 @@
                         <div class="section-content clear col-8 sm-col-10">
                             <h1>Giới thiệu chương trình King Club</h1>
                             <p>Chào mừng bạn tham gia King Club!
-                                <br/>Đây là chương trình kết nối lâu dài dành cho khách hàng
-                            thân thiết của KingBee với tinh thần tiên phong “<b>Tăng trải nghiệm - Tặng giá trị</b>”.
-                            <br />Tham gia làm thành viên của King Club, quý khách hàng có thể dễ dàng thao tác và tận
-                            hưởng rất nhiều ưu đãi: </p>
+                                <br />Đây là chương trình kết nối lâu dài dành cho khách hàng
+                                thân thiết của KingBee với tinh thần tiên phong “<b>Tăng trải nghiệm - Tặng giá
+                                    trị</b>”.
+                                <br />Tham gia làm thành viên của King Club, quý khách hàng có thể dễ dàng thao tác và
+                                tận
+                                hưởng rất nhiều ưu đãi: </p>
                             <ul>
                                 <li>Mua hàng tích điểm - đổi quà</li>
                                 <li>Tra cứu lịch sử mua hàng, hoạt động, đổi quà, nhận quà</li>
@@ -76,38 +187,73 @@
                                 <li>Bộ phận chăm sóc khách hàng sẵn sàng nhận yêu cầu và giải đáp thắc mắc</li>
                                 <li>Nhận tin nhắn cập nhật điểm thưởng, quà tặng, kết quả tích luỹ thường xuyên</li>
                             </ul>
-                            <br/>
+                            <br />
                             <p>Hãy gọi ngay cho hotline 028 7101615 để được tư vấn và trở thành thành viên của King Club
                                 nhé!</p>
-
+                                <div class="wrap-contact100-form-btn">
+                                    <div class="contact100-form-bgbtn"></div>
+                                    <button class="contact100-form-btn" id="myBtn">
+                                        <span>
+                                            Đăng ký ngay
+                                        </span>
+                                      </button>
+                                  </div>
+                                
                         </div><!-- .blog-archive-wrapper -->
                     </main><!-- #main -->
                 </div><!-- #primary -->
 
             </div>
-            <div id="footer"
-                style="background-image: linear-gradient(to right, #400207,#B6030C 50% , #400207);">
+            <div id="footer" style="background-image: linear-gradient(to right, #400207,#B6030C 50% , #400207);">
                 <div class="overlay"></div>
                 <div id="footer-content">
                     <div class="wrapper">
-                        <h4 style="text-align: left;"><span style="color: #ffb347;"><strong>Công ty Cổ phần KBM</strong></span></h4>
-                            <p><strong>Toà nhà Vina, 131 Xô Viết Nghệ Tĩnh, Phường 17, Quận Bình Thạnh, Tp. Hồ Chí Minh</strong></p>
-                            <p><strong>Số điện thoại: 028 7101615</strong></p>
-                            <p><strong>Email: kingclub@kingbee.vn</strong></p>
+                        <h4 style="text-align: left;"><span style="color: #ffb347;"><strong>Công ty Cổ phần
+                                    KBM</strong></span></h4>
+                        <p><strong>Toà nhà Vina, 131 Xô Viết Nghệ Tĩnh, Phường 17, Quận Bình Thạnh, Tp. Hồ Chí
+                                Minh</strong></p>
+                        <p><strong>Số điện thoại: 028 7101615</strong></p>
+                        <p><strong>Email: kingclub@kingbee.vn</strong></p>
                     </div>
                 </div>
-                
+
             </div>
             <div class="backtotop"><i class="fas fa-caret-up"></i></div>
-            <script type='text/javascript' src='assets/js/slick.min.js'
-                id='jquery-slick-js'></script>
+            <script type='text/javascript' src='assets/js/slick.min.js' id='jquery-slick-js'></script>
             <script type='text/javascript' src='assets/js/navigation.min.js'
                 id='creativ-university-navigation-js'></script>
-            <script type='text/javascript'
-                src='assets/js/skip-link-focus-fix.min.js'
+            <script type='text/javascript' src='assets/js/skip-link-focus-fix.min.js'
                 id='creativ-university-skip-link-focus-fix-js'></script>
-            <script type='text/javascript' src='assets/js/custom.min.js'
-                id='creativ-university-custom-js-js'></script>
+            <script type='text/javascript' src='assets/js/custom.min.js' id='creativ-university-custom-js-js'></script>
+
+            <script type='text/javascript'>
+                // Get the modal
+                var modal = document.getElementById("myModal");
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on the button, open the modal
+                btn.onclick = function () {
+                    modal.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+            <script src="assets/js/main.js"></script>
 </body>
 
 </html>
